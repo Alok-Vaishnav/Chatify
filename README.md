@@ -193,3 +193,13 @@ For issues or questions, please open an issue on GitHub.
 ---
 
 **Happy Chatting! 💬**
+
+
+
+**.env MONGODB_URI=mongodb+srv://gotam1875:alok123va@chatapp.vsidv61.mongodb.net/chatify?retryWrites=true&w=majority&appName=ChatApp
+PORT=5000
+NODE_ENV=development
+JWT_SECRET=your_jwt_secret_key_change_this_in_production
+CLOUDINARY_CLOUD_NAME=your_cloudinary_name
+CLOUDINARY_API_KEY=your_cloudinary_api_key
+CLOUDINARY_API_SECRET=your_cloudinary_api_secret
