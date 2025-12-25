@@ -86,8 +86,9 @@ cd frontend
 npm install
 ```
 
-3. Create a `.env` file in the frontend directory (optional):
+3. Create a `.env` file in the frontend directory:
 ```
+# Local development
 VITE_API_URL=http://localhost:5000/api
 ```
 
@@ -95,6 +96,24 @@ VITE_API_URL=http://localhost:5000/api
 ```bash
 npm run dev
 ```
+
+### Deployment
+
+- Frontend (Vercel/Netlify):
+  - Set `VITE_API_URL` to your deployed backend API base including `/api`.
+  - Example: `https://your-backend.onrender.com/api`
+
+- Backend (Render/railway):
+  - Set `FRONTEND_URL` to your deployed frontend URL.
+  - Example: `https://your-frontend.vercel.app`
+
+- Socket.io client target:
+  - The app derives the Socket host from `VITE_API_URL` by removing `/api`, so no extra config is needed.
+  - Example: `VITE_API_URL=https://your-backend.onrender.com/api` → Socket connects to `https://your-backend.onrender.com`.
+
+- Cookies/CORS:
+  - Backend enables CORS with credentials; ensure both URLs use `https` in production.
+  - If you change domains, update `FRONTEND_URL` accordingly and redeploy backend.
 
 ## Running the Project
 
